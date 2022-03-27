@@ -1,6 +1,8 @@
 .status-bar {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
 }
 
 .status-bar__column {

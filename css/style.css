@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
 @import "reset.css";
 @import "status-bar.css";
 @import "variable.css";
 
 * {
   font-family: "Dosis", sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -45,10 +46,13 @@ h1 {
 .login-form input {
   background-color: var(--bg-clolor);
   height: 40px;
+  border: none;
   margin-bottom: 10px;
-  border: 0;
-  border-bottom: 1.8px solid white;
   transition: border-color 0.3s ease-in-out, background-color 0.2s ease-in;
+}
+
+.login-form input:not([type="submit"]) {
+  border-bottom: 1.8px solid white;
 }
 
 .login-form input:focus {
@@ -61,15 +65,16 @@ h1 {
 }
 
 .login-form input:nth-child(2) {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .login-form input[type="submit"] {
+  margin: 20px 0;
+  height: 35px;
   background-color: white;
   color: var(--main-color);
-  height: 45px;
-  border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .login-form input[type="submit"]:hover {
@@ -78,10 +83,7 @@ h1 {
 }
 
 .login-form a {
-  align-self: center;
-  font-size: 15px;
-}
-
-.login-form a:visited {
+  text-align: center;
+  font-size: 13px;
   color: var(--main-color);
 }
