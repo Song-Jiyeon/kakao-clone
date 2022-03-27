@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&display=swap");
 @import "reset.css";
 @import "status-bar.css";
+@import "variable.css";
 
-body {
-  background-color: #89b0e5;
+* {
+  font-family: "Dosis", sans-serif;
 }
 
-h1,
-span {
+body {
+  background-color: var(--bg-clolor);
+}
+
+h1 {
   font-family: "Yeseva One", cursive;
 }
 
@@ -19,15 +24,16 @@ span {
 }
 
 .welcome-header__title {
-  color: #0f3770;
+  color: var(--main-color);
   font-size: 25px;
   margin-bottom: 40px;
 }
 
 .welcome-header__text {
-  width: 50%;
+  width: 70%;
   text-align: center;
   color: white;
+  font-size: 15px;
 }
 
 .login-form {
@@ -37,11 +43,17 @@ span {
 }
 
 .login-form input {
-  background-color: #89b0e5;
+  background-color: var(--bg-clolor);
   height: 40px;
   margin-bottom: 10px;
   border: 0;
-  border-bottom: 1.5px solid #d5d5d5;
+  border-bottom: 1.8px solid white;
+  transition: border-color 0.3s ease-in-out, background-color 0.2s ease-in;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: var(--main-color);
 }
 
 .login-form input::placeholder {
@@ -53,10 +65,16 @@ span {
 }
 
 .login-form input[type="submit"] {
-  background-color: aliceblue;
-  color: #0f3770;
+  background-color: white;
+  color: var(--main-color);
   height: 45px;
+  border: none;
   border-radius: 5px;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: var(--sub-bg-color);
+  color: white;
 }
 
 .login-form a {
@@ -65,5 +83,5 @@ span {
 }
 
 .login-form a:visited {
-  color: #0f3770;
+  color: var(--main-color);
 }
