@@ -1,0 +1,19 @@
+.nav {
+    background-color: white;
+    padding: 18px 50px;
+    border-top: 2px solid var(--sub-bg-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    color: var(--sub-bg-color);
+}
+
